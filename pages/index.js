@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Chris'Stag Party!</title>
+        <title>Chris' Stag Party!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -14,7 +14,7 @@ export default function Home() {
         <Header title="The Plan!" />
         <p className="description">
           <ul>
-          <li>1pm: <a href="https://www.salthorse.beer/drink-food#drinks">Meet at Salt Horse</a>for swift beer and/or snacks (a table is booked for 6 under Chris' name) </li>
+          <li>1pm: <a href="https://www.salthorse.beer/drink-food#drinks">Meet at Salt Horse</a> for swift beer and/or snacks (a table is booked for 6 under Chris' name) </li>
           <li>1:57pm: Catch 31 bus from the stop on South Bridge to New Dundas Park (a later bus can be taken if required)</li>
           <li>2:45pm: Arrive at New Dundas Park (£7 on the door) </li>
           <li>3pm: Kick off - Bonnyrigg Rose vs Bo'Ness Utd </li>
