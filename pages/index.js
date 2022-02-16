@@ -1,4 +1,3 @@
-import Footer from '@components/Footer';
 import Header from '@components/Header';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -10,20 +9,32 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import SportsBarIcon from '@mui/icons-material/SportsBar';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import StadiumIcon from '@mui/icons-material/Stadium';
-import Timeline from '@mui/lab/Timeline';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab/';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import { motion, useCycle } from "framer-motion";
 import Head from 'next/head';
 import * as React from 'react';
 
-
 export default function Home() {
+  const [animate, cycle] = useCycle(
+    { scale: 1, rotate: 0 },
+    { scale: 1.25, rotate: 15 },
+  )
+
+
+  const [animate1, cycle1] = useCycle(
+    {
+      scale: [1, 1.1, 1.2, 1],
+      rotate: [0, 15, -16, 0]
+    },
+    {
+      scale: [1, 1.3, 1.4, 1],
+      rotate: [0, -10, 10, 0],
+    },
+  )
+
+
   return (
     <div className="container">
       <Head>
@@ -32,10 +43,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main>
-
         <Header />
-        <Avatar alt="chris head" src="/chris-head-1.png"
-          sx={{ width: 174, height: 174 }} variant="square" />
+
+        <motion.div
+          animate={animate}
+          onTap={cycle}>
+          <Avatar alt="chris head" src="/chris-head-1.png"
+            sx={{ width: 174, height: 174 }} variant="square" />
+        </motion.div>
+
+
         <Timeline position="alternate">
           <TimelineItem>
             <TimelineOppositeContent
@@ -218,7 +235,8 @@ export default function Home() {
               <Typography>Careful there is 17% 'er on the menu!</Typography>
               <Typography><a href="https://untappd.com/v/wee-vault-edinburgh/10930853">Tap List</a></Typography>
             </TimelineContent>
-          </TimelineItem><TimelineItem>
+          </TimelineItem>
+          <TimelineItem>
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body"
@@ -245,11 +263,15 @@ export default function Home() {
           </TimelineItem>
         </Timeline>
 
-        <Avatar alt="chris head" src="/chris-head-2.png"
-          sx={{ width: 138, height: 184 }} variant="square" />
+        <motion.div
+          initial={{ opacity: 1, scale: 1 }}
+          onTap={cycle1}
+          animate={animate1}
+          viewport={{ once: true }}>
+          <Avatar alt="chris head" src="/chris-head-2.png"
+            sx={{ width: 138, height: 184 }} variant="square" />
+        </motion.div>
       </main>
-
-      <Footer />
     </div>
   )
 }
