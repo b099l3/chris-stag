@@ -200,7 +200,7 @@ export default function Home() {
               variant="body"
               color="text.secondary"
             >
-              6:30 pm
+              8:30 pm
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
