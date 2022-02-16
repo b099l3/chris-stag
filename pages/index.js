@@ -17,9 +17,11 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Head from 'next/head';
 import * as React from 'react';
+
 
 export default function Home() {
   return (
@@ -30,7 +32,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main>
+
         <Header />
+        <Avatar alt="chris head" src="/chris-head-1.png"
+          sx={{ width: 174, height: 174 }} variant="square" />
         <Timeline position="alternate">
           <TimelineItem>
             <TimelineOppositeContent
@@ -233,6 +238,9 @@ export default function Home() {
             </TimelineContent>
           </TimelineItem>
         </Timeline>
+
+        <Avatar alt="chris head" src="/chris-head-2.png"
+          sx={{ width: 138, height: 184 }} variant="square" />
       </main>
 
       <Footer />
