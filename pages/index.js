@@ -57,7 +57,8 @@ export default function Home() {
               <Typography variant="h6" component="span">
                 <a href="https://www.salthorse.beer/drink-food#drinks">Meet at Salt Horse</a>
               </Typography>
-              <Typography>for swift beer and/or snacks (a table is booked for 6 under Chris' name)</Typography>
+              <Typography>Swift beer and/or snacks</Typography>
+              <Typography color="gray" variant="caption">Table is booked for 6 under Chris</Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -79,7 +80,8 @@ export default function Home() {
               <Typography variant="h6" component="span">
                 Catch 31 bus
               </Typography>
-              <Typography>from the stop on South Bridge to New Dundas Park (a later bus can be taken if required)</Typography>
+              <Typography><a href="https://goo.gl/maps/GrjP5Vb1nCY3WwAV9">South Bridge to New Dundas Park</a></Typography>
+              <Typography color="gray" variant="caption">Later bus can be taken if required</Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -167,7 +169,7 @@ export default function Home() {
               <Typography variant="h6" component="span">
                 Catch 31 bus
               </Typography>
-              <Typography>back to Palmerston Place</Typography>
+              <Typography><a href="https://goo.gl/maps/QuJyzPqZQUoBM1SM8">to Palmerston Place</a></Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -213,7 +215,8 @@ export default function Home() {
               <Typography variant="h6" component="span">
                 <a href="https://vaultcity.co.uk/pages/the-wee-vault-tasting-room-and-bottleshop">Drinks at The Wee Vault</a>
               </Typography>
-              <Typography>ho ho!</Typography>
+              <Typography>Careful there is 17% 'er on the menu!</Typography>
+              <Typography><a href="https://untappd.com/v/wee-vault-edinburgh/10930853">Tap List</a></Typography>
             </TimelineContent>
           </TimelineItem><TimelineItem>
             <TimelineOppositeContent
@@ -234,7 +237,10 @@ export default function Home() {
               <Typography variant="h6" component="span">
                 <a href="http://www.luckyliquorco.com/LLC_menu33.pdf">Lucky Liquor</a>
               </Typography>
-              <Typography>ho ho!</Typography>
+              <Typography>or</Typography>
+              <Typography variant="h6" component="span">
+                <a href="https://g.page/neverreallyhere?share">Never Really Here</a>
+              </Typography>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
